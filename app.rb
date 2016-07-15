@@ -1,3 +1,4 @@
+require 'sinatra'
 class MyApp < Sinatra::Base
   set :bind, '0.0.0.0'
 
