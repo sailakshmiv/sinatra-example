@@ -1,10 +1,9 @@
-require 'sinatra'
+class MyApp < Sinatra::Base
+  set :bind, '0.0.0.0'
 
-get '/' do
-  "the time where this server lives is #{Time.now}
-    <br /><br />check out your <a href=\"/agent\">user_agent</a>"
-end
+  get '/' do
+    'Hello World'
+  end
 
-get '/agent' do
-  "you're using #{request.user_agent}"
+  run! if app_file == $0
 end
